@@ -22,9 +22,9 @@ namespace DeepThought
 
             ChicagoTypewriter ctw = new ChicagoTypewriter(k, b);
 
-            string workPath = Path.GetFullPath(args[0]);
             try
             {
+                string workPath = Path.GetFullPath(args[0]);
                 string result = ctw.Fire(workPath);
 
                 File.WriteAllText(workPath + @"Result\" + fileName, result);
